@@ -156,6 +156,7 @@ class InnerPointEstimator(Estimator):
             upper_bound *= self._prefactor
         else:
             upper_bound /= self._prefactor
+        print(upper_bound)
         if lower_bound > 0.0:
             lower_bound /= self._prefactor
         else:
