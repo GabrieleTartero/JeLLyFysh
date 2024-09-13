@@ -156,7 +156,7 @@ def print_start_message() -> None:
     print("JeLLFysh (version {0}) - a Python application for all-atom event-chain Monte Carlo - "
           "https://github.com/jellyfysh".format(version.__version__))
     print("Copyright (C) 2019, 2022 The JeLLyFysh organization")
-    print("Development")
+    print("InnerPatch")
 
 
 def main() -> None:
