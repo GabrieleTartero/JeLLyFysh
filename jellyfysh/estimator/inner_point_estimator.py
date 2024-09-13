@@ -137,7 +137,6 @@ class InnerPointEstimator(Estimator):
         super().derivative_bound(lower_corner, upper_corner, direction, calculate_lower_bound)
         upper_bound = -float('inf')
         lower_bound = float('inf')
-
         for i in range((self._points_per_side + 1) ** setting.dimension):
             vector = [0] * setting.dimension
             remainder = i
