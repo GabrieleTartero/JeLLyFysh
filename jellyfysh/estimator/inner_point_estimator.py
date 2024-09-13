@@ -145,6 +145,7 @@ class InnerPointEstimator(Estimator):
                 vector[setting.dimension - k] = int(remainder / (self._points_per_side ** (setting.dimension - k)))
                 remainder = remainder % (self._points_per_side ** (setting.dimension - k))
             vector[0] = remainder
+            print(vector)
             separation = [lower_corner[j] + (upper_corner[j] - lower_corner[j]) * vector[j] / self._points_per_side
                           for j in range(setting.dimension)]
             self._correct_separation(separation)
@@ -156,7 +157,6 @@ class InnerPointEstimator(Estimator):
             upper_bound *= self._prefactor
         else:
             upper_bound /= self._prefactor
-        print(upper_bound)
         if lower_bound > 0.0:
             lower_bound /= self._prefactor
         else:
